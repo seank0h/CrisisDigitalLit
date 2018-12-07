@@ -49,9 +49,6 @@ export class Graph {
         this.nodes[18] = new Node(0, [19]);
         this.nodes[19] = new Node(0, [20]);
         this.nodes[20] = new Node(0, []);
-        
-        
-        
     }
     
     // gets the adjacencies for a country, by name

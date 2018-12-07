@@ -5,6 +5,12 @@ var currentNode = 0;
 
 var graph = Graph();
 
+export function loadFromLocal(){
+    if(localStorage.getItem('currentNode')){
+        count = localStorage.getItem('currentNode');
+    }
+}
+
 export function move(country){
     adjacencies = graph.getAdjacenciesByID(currentNode);
     for(var i = 0; i < adjacencies.length; i++){
@@ -13,6 +19,8 @@ export function move(country){
             currentNode = id;
         }
     }
+    
+    localStorage.setItem('currentNode', currentNode);
     
     // do code to reveal paths + nodes either here or in some other file that either consults:
     // 1. graph.getAdjacenciesByID(currentNode) 
