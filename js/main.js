@@ -1,3 +1,7 @@
+import * as gtf from "./getTextFile.js";
+
+gtf.displayLog("the-netherlands");
+
 d3.select('#map-container')
     .append("svg")
     .attr('class','svg-icon')
