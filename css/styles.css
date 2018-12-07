@@ -13,4 +13,13 @@
     height: 100vh;
     width: 75vw;
 }
-
+/* Styles go here */
+@font-face
+{
+    font-family:ArabDances;
+    src: url(Fonts/ArabDances.ttf);
+}
+#log
+{
+    font-family: ArabDances, Arial, sans-serif;
+}
