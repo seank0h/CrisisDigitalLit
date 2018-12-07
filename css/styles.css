@@ -16,10 +16,28 @@
 /* Styles go here */
 @font-face
 {
-    font-family:ArabDances;
-    src: url(Fonts/ArabDances.ttf);
+    font-family:ArabianOneNight;
+    src: url(../Fonts/ArabianOneNight.ttf);
 }
-#log
+@media screen and (min-width:901px)
 {
-    font-family: ArabDances, Arial, sans-serif;
+    #log
+    {
+        font-family: ArabianOneNight, Arial, sans-serif;
+        font-size: 24px;
+        background-image: url("../images/logbackground2.jpg");
+        background-repeat: repeat-y;
+        overflow: scroll;
+        height:940px;
+    }
+}
+@media screen and (max-width:800px)
+{
+    #log
+    {
+        font-family: ArabianOneNight, Arial, sans-serif;
+        font-size: 12px;
+        background-image: url("../images/logbackground2.jpg");
+        background-repeat: repeat-x;
+    }
 }
