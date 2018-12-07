@@ -5,11 +5,16 @@
         <link rel="stylesheet" type="text/css" href="css/styles.css">
     </head>
     <body>
-        <img id="map" src="images/Blank_Map_of_Europe_-w_boundaries.svg" alt="map of europe and parts of middle east" />
-        <!-- Date	June 2006
-            Source	derived from Image:BlankMap-World6.svg
-            Author	Zaparojdik
-            URL https://commons.wikimedia.org/wiki/File:BlankMap-Europe-v5.png-->
+        <div class="grid-container">
+            <div id="map-container" class="grid-item"></div>
+                <!-- <img id="map" class="grid-item" src="images/Blank_Map_of_Europe_-w_boundaries.svg" alt="map of europe and parts of middle east" /> -->
+                <!-- Date	June 2006
+                Source	derived from Image:BlankMap-World6.svg
+                Author	Zaparojdik
+                URL https://commons.wikimedia.org/wiki/File:BlankMap-Europe-v5.png-->
+            <div id="test" class="grid-item">Journal Goes Here</div>
+        </div>    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js"></script>
         <script src="js/main.js"></script>
     </body>
 </html>
