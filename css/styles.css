@@ -5,6 +5,8 @@
 .grid-container {
     display: grid;
     grid-template-columns: 75vw 23vw;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
 }
 
 #map-container{
@@ -27,28 +29,35 @@
 /* Styles go here */
 @font-face
 {
-    font-family:ArabianOneNight;
-    src: url(../Fonts/ArabianOneNight.ttf);
+    font-family:Wizzta;
+    src: url(../Fonts/wizzta.ttf);
 }
-@media screen and (min-width:901px)
+@media screen and (min-width:801px)
 {
     #log
     {
-        font-family: ArabianOneNight, Arial, sans-serif;
+        display: flex;
+        font-family: Wizzta, Arial, sans-serif;
         font-size: 24px;
         background-image: url("../images/logbackground2.jpg");
-        background-repeat: repeat-y;
+        background-repeat: repeat;
         overflow: scroll;
-        height:940px;
+        height:100vh;
+        text-align: center;
+        max-width: 100%;
+        overflow-x:hidden;
     }
 }
 @media screen and (max-width:800px)
 {
     #log
     {
-        font-family: ArabianOneNight, Arial, sans-serif;
+        display: flex;
+        font-family: Wizzta, Arial, sans-serif;
         font-size: 12px;
         background-image: url("../images/logbackground2.jpg");
-        background-repeat: repeat-x;
+        background-repeat: repeat;
+        max-width: 100%;
+        overflow-x:hidden;
     }
 }
