@@ -1,16 +1,27 @@
 #map {
-    width: 74vw;
+    /* width: 74vw; */
 }
 
 .grid-container {
     display: grid;
-    grid-template-columns: 75vw 25vw;
+    grid-template-columns: 75vw 23vw;
 }
 
 #map-container{
+    display: inline-block;
+    position: relative;
     background-image: url("../images/Blank_Map_of_Europe_-w_boundaries.svg");
-    background-size: 75vw;
+    background-size: 100vw;
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
     height: 100vh;
-    width: 75vw;
+    width: 70vw;
+}
+
+.svg-icon {
+    display: inline-block;
+    /* position: absolute; */
+    /* top: 0; */
+    /* left: 0; */
 }
 
