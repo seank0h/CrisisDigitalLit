@@ -7,10 +7,9 @@ export function getTextFile(fileName){
 }
 
 export var log = [];
-console.log(log);
+
 export function addTextToLog(lexiaName){
    log.unshift(getTextFile('../lexia/' + lexiaName + '.txt'));
-   console.log(log);
 }
 
 export function displayLog(){
