@@ -1,12 +1,11 @@
 var mymap = L.map('mapid')
 .setView([47.1625, 19.09], 5);
 
-
 var _lat;
 var _lng;
 var circle;
 
-function setLatLngFromCountryCode(_countryCode){
+export function drawNodeWithCountryCode(_countryCode){
     $.ajax({ url:'http://api.geonames.org/countryInfo?country=' +_countryCode + '&type=json&username=LeoHolman',
              success: function(data){
                 saveLatLng(data.geonames[0].north,data.geonames[0].east);
@@ -43,15 +42,7 @@ mymap.on('click', function(e){
              success: function(data){
                  country = data.countryName;
                  $('.leaflet-popup-content').text(country);
-                 console.log("Lat"+ e.latlng.lat + "lng" + e.latlng.lng);
-                 console.log(data.countryName);
              }
     });
    popup.setLatLng(e.latlng).setContent('').openOn(mymap);
 });
-
-
-
-setLatLngFromCountryCode("SY");
-setLatLngFromCountryCode("DE");
-setLatLngFromCountryCode("TR");
