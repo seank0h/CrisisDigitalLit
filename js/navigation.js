@@ -1,9 +1,9 @@
-import * as g from Graph
+import * as g from "./graph.js";
 
 // do I need to export these? I don't really know what module formatting requires
 var currentNode = 0;
 
-var graph = Graph();
+var graph = new g.Graph();
 
 export function loadFromLocal(){
     if(localStorage.getItem('currentNode')){
