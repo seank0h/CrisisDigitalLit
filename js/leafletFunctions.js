@@ -41,7 +41,7 @@ mymap.dragging.disable();
 var popup = L.popup();
 var country;
 mymap.on('click', function(e){
-    $.ajax({ url:'http://api.geonames.org/countryCode?lat='+e.latlng.lat+'&lng='+e.latlng.lng+'&type=json&username=LeoHolman',
+    $.ajax({ url:'https://api.geonames.org/countryCode?lat='+e.latlng.lat+'&lng='+e.latlng.lng+'&type=json&username=LeoHolman',
              success: function(data){
                  country = data.countryName;
                  $('.leaflet-popup-content').text(country);
