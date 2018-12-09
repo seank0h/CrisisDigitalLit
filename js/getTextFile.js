@@ -6,6 +6,13 @@ export function getTextFile(fileName){
     return text;
 }
 
-export function displayLog(lexiaName){
-    document.getElementById("log").innerText = getTextFile('../lexia/' + lexiaName + '.txt');
+export var log = [];
+console.log(log);
+export function addTextToLog(lexiaName){
+   log.unshift(getTextFile('../lexia/' + lexiaName + '.txt'));
+   console.log(log);
+}
+
+export function displayLog(){
+    document.getElementById("log").innerText = log.join('\n\n<------------>\n\n');
 }

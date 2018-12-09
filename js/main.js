@@ -1,5 +1,7 @@
 import * as gtf from "./getTextFile.js";
 import * as leaflet from "./leafletFunctions.js"
 
-gtf.displayLog("the-netherlands");
+gtf.addTextToLog("the-netherlands");
+gtf.addTextToLog('belguim');
+gtf.displayLog();
 leaflet.drawNodeWithCountryCode("SY");
