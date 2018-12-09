@@ -8,16 +8,16 @@
 #map-container{
     display: inline-block;
     position: relative;
-    background-image: url("../images/Blank_Map_of_Europe_-w_boundaries.svg");
-    background-size: 100%;
-    background-position: 100% 100%;
-    background-repeat: no-repeat;
     height: 100vh;
     width: 70vw;
 }
 
 .svg-icon {
     display: inline-block;
+}
+
+#mapid { 
+    height: 100vh;
 }
 /* Styles go here */
 @font-face
