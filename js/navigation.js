@@ -2,7 +2,7 @@ import * as g from "./graph.js";
 
 export var currentNode = 0;
 
-export var path = [0];
+export var path = [];
 
 export var graph = new g.Graph();
 
@@ -24,8 +24,8 @@ export function move(country){
             return false;
         }
         if(id == adjacencies[i]){
-            currentNode = id;
-            path[path.length] = i;
+            path[path.length] = currentNode;
+            currentNode = id;;
             localStorage.setItem('currentNode', currentNode);
             localStorage.setItem('path', JSON.stringify(path));
             return true;
