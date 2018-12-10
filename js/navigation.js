@@ -1,10 +1,9 @@
 import * as g from "./graph.js";
 
-// do I need to export these? I don't really know what module formatting requires
-var currentNode = 0;
+export var currentNode = 0;
 
-var graph = new g.Graph();
-var adjacencies;
+export var graph = new g.Graph();
+var adjacencies,count;
 export function loadFromLocal(){
     if(localStorage.getItem('currentNode')){
         count = localStorage.getItem('currentNode');

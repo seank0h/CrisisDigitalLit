@@ -1,5 +1,5 @@
 import * as nav from "./navigation.js";
-
+import * as main from "./main.js";
 var mymap = L.map('mapid')
 .setView([47.1625, 19.09], 4);
 
@@ -49,6 +49,8 @@ mymap.on('click', function(e){
                  $('.leaflet-popup-content').text(country);
                  console.log(country);
                  nav.move(country);
+                 console.log(nav.currentNode);
+                 main.redrawNodes();
              }         
     });
    popup.setLatLng(e.latlng).setContent('').openOn(mymap);

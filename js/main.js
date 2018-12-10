@@ -2,11 +2,20 @@ import * as gtf from "./getTextFile.js";
 import * as leaflet from "./leafletFunctions.js";
 import * as nav from "./navigation.js";
 
+nav.loadFromLocal();
 
+export function redrawNodes(){
+    var here = nav.currentNode;
+    var routes = nav.graph.getAdjacenciesByID(here);
 
-gtf.addTextToLog("the-netherlands");
+    for(var i = 0; i<routes.length; i++){
+        leaflet.drawNodeWithCountryCode(nav.graph.getCountryCodeByID(routes[i]));
+    }
+}
 
-gtf.addTextToLog('belguim');
-gtf.displayLog();
-leaflet.drawNodeWithCountryCode("SY");
-leaflet.drawNodeWithCountryCode("TR");
+redrawNodes();
+//Place holder
+// gtf.addTextToLog("the-netherlands");
+
+// gtf.addTextToLog('belguim');
+// gtf.displayLog();

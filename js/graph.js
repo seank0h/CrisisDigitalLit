@@ -3,6 +3,7 @@ export class Graph {
     constructor() {
         this.nodes = [];
         this.countries = [];
+        this.countryCodes = [];
         
         // assign countries ids:
         this.countries[0] = "Syria";
