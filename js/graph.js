@@ -26,6 +26,29 @@ export class Graph {
         this.countries[18] = "Iran";
         this.countries[19] = "Russia";
         this.countries[20] = "Italy";
+
+        // assign country codes to ids
+        this.countryCodes[0] = "SY";
+        this.countryCodes[1] = "TR";
+        this.countryCodes[2] = "BG";
+        this.countryCodes[3] = "RS";
+        this.countryCodes[4] = "RO";
+        this.countryCodes[5] = "HU";
+        this.countryCodes[6] = "AT";
+        this.countryCodes[7] = "DE";
+        this.countryCodes[8] = "SE";
+        this.countryCodes[9] = "BE";
+        this.countryCodes[10] = "NL";
+        this.countryCodes[11] = "LB";
+        this.countryCodes[12] = "GR";
+        this.countryCodes[13] = "EG";
+        this.countryCodes[14] = "LY";
+        this.countryCodes[15] = "DZ";
+        this.countryCodes[16] = "ES";
+        this.countryCodes[17] = "IQ";
+        this.countryCodes[18] = "IR";
+        this.countryCodes[19] = "RU";
+        this.countryCodes[20] = "IT";
         
         // build the graph itself
         this.nodes[0] = new Node(0, [1, 11, 13, 18]);
@@ -56,6 +79,10 @@ export class Graph {
         return nodes[this.getCountryID(country)].getAdjacencies();
     }
     
+    getCountryCodeByID(id){
+        return this.countryCodes[id];
+    }
+
     // gets the adjacencies for a country, by id
     getAdjacenciesByID(id){
         return this.nodes[id].getAdjacencies();
