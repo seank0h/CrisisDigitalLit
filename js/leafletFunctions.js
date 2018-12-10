@@ -7,13 +7,13 @@ var _lat;
 var _lng;
 var circle;
 
-export function drawNodeWithCountryCode(_countryCode){
+export function drawNodeWithCountryCode(_countryCode,_color){
     $.ajax({ url:'http://api.geonames.org/countryInfo?country=' +_countryCode + '&type=json&username=LeoHolman',
              success: function(data){
                 saveLatLng(data.geonames[0].north,data.geonames[0].east);
                 circle = L.circle([data.geonames[0].north - ((data.geonames[0].north - data.geonames[0].south)/2), data.geonames[0].east - ((data.geonames[0].east - data.geonames[0].west)/2)] , {
-                    color: 'red',
-                    fillColor: '#f03',
+                    color: _color,
+                    fillColor: _color,
                     fillOpacity: 0.5,
                     radius: 50000
                 }).addTo(mymap);
