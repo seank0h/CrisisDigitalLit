@@ -1,5 +1,7 @@
+import * as nav from "./navigation.js";
+
 var mymap = L.map('mapid')
-.setView([47.1625, 19.09], 5);
+.setView([47.1625, 19.09], 4);
 
 var _lat;
 var _lng;
@@ -30,8 +32,8 @@ function returnLatLng(){
 
 L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-    maxZoom: 5,
-    minZoom: 5,
+    maxZoom: 4,
+    minZoom: 4,
     id: 'mapbox.streets',
     accessToken: 'pk.eyJ1IjoibGVvaG9sbWFuIiwiYSI6ImNqcGgxOHZhMjBlNGIzd3RlYmVmdmp0ZzEifQ.BoCaFJg56cfva3CHDIOsZw'
 }).addTo(mymap);
@@ -45,7 +47,9 @@ mymap.on('click', function(e){
              success: function(data){
                  country = data.countryName;
                  $('.leaflet-popup-content').text(country);
-             }
+                 console.log(country);
+                 nav.move(country);
+             }         
     });
    popup.setLatLng(e.latlng).setContent('').openOn(mymap);
 });
