@@ -2,12 +2,18 @@ import * as g from "./graph.js";
 
 export var currentNode = 0;
 
+export var path = [0];
+
 export var graph = new g.Graph();
+
 var adjacencies,count;
 export function loadFromLocal(){
     if(localStorage.getItem('currentNode')){
         count = localStorage.getItem('currentNode');
     }
+    if(localStorage.getItem('path'){
+        path = JSON.parse(localStorage.getItem('path'));
+    })
 }
 
 export function move(country){
@@ -19,7 +25,9 @@ export function move(country){
         }
         if(id == adjacencies[i]){
             currentNode = id;
+            path[path.length] = i;
             localStorage.setItem('currentNode', currentNode);
+            localStorage.setItem('path', JSON.stringify(path));
             return true;
         }
     }

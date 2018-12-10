@@ -23,10 +23,10 @@ export class Graph {
         this.countries[14] = "Libya";
         this.countries[15] = "Algeria";
         this.countries[16] = "Spain";
-        this.countries[17] = "Iraq";
-        this.countries[18] = "Iran";
-        this.countries[19] = "Russia";
-        this.countries[20] = "Italy";
+        this.countries[17] = "Italy";
+        this.countries[18] = "Iraq";
+        this.countries[19] = "Iran";
+        this.countries[20] = "Russia";
 
         // assign country codes to ids
         this.countryCodes[0] = "SY";
@@ -46,10 +46,10 @@ export class Graph {
         this.countryCodes[14] = "LY";
         this.countryCodes[15] = "DZ";
         this.countryCodes[16] = "ES";
-        this.countryCodes[17] = "IQ";
-        this.countryCodes[18] = "IR";
-        this.countryCodes[19] = "RU";
-        this.countryCodes[20] = "IT";
+        this.countryCodes[17] = "IT";
+        this.countryCodes[18] = "IQ";
+        this.countryCodes[19] = "IR";
+        this.countryCodes[20] = "RU";
         
         // build the graph itself
         this.nodes[0] = new Node(0, [1, 11, 13, 18]);
