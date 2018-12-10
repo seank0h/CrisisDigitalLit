@@ -15,12 +15,17 @@ export function move(country){
     adjacencies = graph.getAdjacenciesByID(currentNode);
     for(var i = 0; i < adjacencies.length; i++){
         var id = graph.getCountryID(country);
+        if(id == -1){
+            return false;
+        }
         if(id == adjacencies[i]){
             currentNode = id;
+            localStorage.setItem('currentNode', currentNode);
+            return true;
         }
     }
+    return false;
     
-    localStorage.setItem('currentNode', currentNode);
     
     // do code to reveal paths + nodes either here or in some other file that either consults:
     // 1. graph.getAdjacenciesByID(currentNode) 
