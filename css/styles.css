@@ -1,23 +1,32 @@
+#map {
+    /* width: 74vw; */
+}
+
 .grid-container {
     display: grid;
-    grid-template-columns: 75vw 23vw;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
+    grid-template-columns: 74vw 26vw;
+    grid-gap: 0px;
+    background: beige;
+
 }
 
 #map-container{
     display: inline-block;
     position: relative;
-    background-image: url("../images/Blank_Map_of_Europe_-w_boundaries.svg");
-    background-size: 100%;
+    background:black url("../images/Blank_Map_of_Europe_-w_boundaries.svg");
+    background-size: 100vw;
     background-position: 100% 100%;
     background-repeat: no-repeat;
     height: 100vh;
-    width: 70vw;
+    width: 74vw;
+    
 }
 
 .svg-icon {
     display: inline-block;
+    /* position: absolute; */
+    /* top: 0; */
+    /* left: 0; */
 }
 /* Styles go here */
 @font-face
@@ -29,22 +38,25 @@
 {
     #log
     {
+        
         display: flex;
         font-family: Wizzta, Arial, sans-serif;
-        font-size: 24px;
+        font-size: 25px;
+        padding-left: 15px;
+        padding-right: 15px;
         background-image: url("../images/logbackground2.jpg");
         background-repeat: repeat;
-        overflow: scroll;
-        height:100vh;
+        height:100%;
         text-align: center;
         max-width: 100%;
-        overflow-x:hidden;
     }
 }
 @media screen and (max-width:800px)
 {
     #log
     {
+        padding-left: 15px;
+        padding-right: 15px;
         display: flex;
         font-family: Wizzta, Arial, sans-serif;
         font-size: 12px;
