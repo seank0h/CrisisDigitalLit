@@ -11,9 +11,9 @@ export function loadFromLocal(){
     if(localStorage.getItem('currentNode')){
         count = localStorage.getItem('currentNode');
     }
-    if(localStorage.getItem('path'){
+    if(localStorage.getItem('path')){
         path = JSON.parse(localStorage.getItem('path'));
-    })
+    }
 }
 
 export function move(country){

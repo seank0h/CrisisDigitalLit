@@ -8,6 +8,7 @@ var _lng;
 var circle;
 
 export function drawNodeWithCountryCode(_countryCode,_color){
+    console.log(_countryCode);
     $.ajax({ url:'http://api.geonames.org/countryInfo?country=' +_countryCode + '&type=json&username=LeoHolman',
              success: function(data){
                 saveLatLng(data.geonames[0].north,data.geonames[0].east);
