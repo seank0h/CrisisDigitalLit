@@ -4,7 +4,7 @@ import * as g from "./graph.js";
 var currentNode = 0;
 
 var graph = new g.Graph();
-
+var adjacencies;
 export function loadFromLocal(){
     if(localStorage.getItem('currentNode')){
         count = localStorage.getItem('currentNode');
