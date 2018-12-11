@@ -8,6 +8,7 @@ var _lng;
 var circle;
 
 export function drawNodeWithCountryCode(_countryCode,_color){
+    // console.log(_countryCode);
     $.ajax({ url:'http://api.geonames.org/countryInfo?country=' +_countryCode + '&type=json&username=LeoHolman',
              success: function(data){
                 saveLatLng(data.geonames[0].north,data.geonames[0].east);
@@ -47,10 +48,10 @@ mymap.on('click', function(e){
              success: function(data){
                  country = data.countryName;
                  $('.leaflet-popup-content').text(country);
-                 console.log(country);
+                 console.log("Moving to :" +country);
                  nav.move(country);
-                 console.log(nav.currentNode);
-                 main.redrawNodes();
+                 console.log("Current node is " +nav.currentNode);
+                 main.redrawNodes(nav.currentNode,nav.path[nav.path.length-1]);
              }         
     });
    popup.setLatLng(e.latlng).setContent('').openOn(mymap);
