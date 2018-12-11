@@ -1,5 +1,7 @@
 import * as nav from "./navigation.js";
 import * as main from "./main.js";
+import * as gtf from "./getTextFile.js";
+
 var mymap = L.map('mapid')
 .setView([47.1625, 19.09], 4);
 
@@ -52,6 +54,7 @@ mymap.on('click', function(e){
                  nav.move(country);
                  console.log("Current node is " +nav.currentNode);
                  main.redrawNodes(nav.currentNode,nav.path[nav.path.length-1]);
+                 gtf.displayLog();
              }         
     });
    popup.setLatLng(e.latlng).setContent('').openOn(mymap);

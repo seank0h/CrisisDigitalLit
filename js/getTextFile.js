@@ -13,7 +13,7 @@ export function setLog(value){
 
 export function addTextToLog(lexiaName){
    log.unshift(getTextFile('../lexia/' + lexiaName + '.txt'));
-   localStorage.setItem("log",log);
+   localStorage.setItem("log",JSON.stringify(log));
 }
 
 export function displayLog(){

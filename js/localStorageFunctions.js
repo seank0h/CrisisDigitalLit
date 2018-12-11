@@ -12,6 +12,10 @@ export function loadFromLocal(){
     if(localStorage.getItem('log')){
         gtf.setLog(JSON.parse(localStorage.getItem('log')));
     }
+    // for (var i =0; i < nav.path.length; i++){
+    //     gtf.addTextToLog(nav.graph.getCountry(nav.path[i]));
+    // }
+    // gtf.addTextToLog(nav.graph.getCountry(nav.currentNode));
 }
 
 export function reset(){

@@ -3,7 +3,8 @@ import * as leaflet from "./leafletFunctions.js";
 import * as nav from "./navigation.js";
 import * as localStore from "./localStorageFunctions.js"
 
-window.onload = localStore.loadFromLocal;
+// localStore.loadFromLocal();
+localStore.reset();
 // localStorage.currentNode = 0;
 // localStorage.path = JSON.stringify([]);
 
