@@ -1,4 +1,5 @@
 import * as g from "./graph.js";
+import * as gtf from "./getTextFile.js";
 
 export var currentNode = 0;
 
@@ -6,13 +7,16 @@ export var path = [];
 
 export var graph = new g.Graph();
 
-var adjacencies,count;
+var adjacencies;
 export function loadFromLocal(){
     if(localStorage.getItem('currentNode')){
-        count = localStorage.getItem('currentNode');
+        currentNode = localStorage.getItem('currentNode');
     }
     if(localStorage.getItem('path')){
         path = JSON.parse(localStorage.getItem('path'));
+    }
+    if(localStorage.getItem('log')){
+        gtf.log = JSON.parse(localStorage.getItem('log'));
     }
 }
 
@@ -25,7 +29,8 @@ export function move(country){
         }
         if(id == adjacencies[i]){
             path[path.length] = currentNode;
-            currentNode = id;;
+            currentNode = id;
+            gtf.addTextToLog(country);
             localStorage.setItem('currentNode', currentNode);
             localStorage.setItem('path', JSON.stringify(path));
             return true;
