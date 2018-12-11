@@ -20,3 +20,10 @@ redrawNodes();
 
 // gtf.addTextToLog('belguim');
 // gtf.displayLog();
+
+
+// get last element of nav.path
+// change that node to visited color
+// get adjacencies of that node, change to places you can't go
+// get currentNode, change to here color
+// get adj of currentNode, change to can visit color
