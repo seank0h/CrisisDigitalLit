@@ -13,3 +13,12 @@ export function loadFromLocal(){
         gtf.setLog(JSON.parse(localStorage.getItem('log')));
     }
 }
+
+export function reset(){
+    nav.setCurrentNode(0);
+    nav.setPath([]);
+    gtf.setLog([]);
+    localStorage.setItem('currentNode', 0);
+    localStorage.setItem("path", JSON.stringify([]));
+    localStorage.setItem("log", JSON.stringify([]));
+}
