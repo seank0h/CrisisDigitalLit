@@ -1,19 +1,16 @@
 import * as gtf from "./getTextFile.js";
 import * as leaflet from "./leafletFunctions.js";
 import * as nav from "./navigation.js";
+import * as localStore from "./localStorageFunctions.js"
 
-window.onload = nav.loadFromLocal();
+window.onload = localStore.loadFromLocal;
 // localStorage.currentNode = 0;
 // localStorage.path = JSON.stringify([]);
-
-
 
 var currentNodesColor = "blue";
 var previousNodesColor = "red";
 var didNotGoNodesColor = "black";
 var prospectsNodesColor = "green";
-
-
 
 export function redrawNodes(here, previous){
     var routes = nav.graph.getAdjacenciesByID(here);

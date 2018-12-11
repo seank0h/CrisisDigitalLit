@@ -2,22 +2,16 @@ import * as g from "./graph.js";
 import * as gtf from "./getTextFile.js";
 
 export var currentNode = 0;
-
 export var path = [];
-
 export var graph = new g.Graph();
-
 var adjacencies;
-export function loadFromLocal(){
-    if(localStorage.getItem('currentNode')){
-        currentNode = localStorage.getItem('currentNode');
-    }
-    if(localStorage.getItem('path')){
-        path = JSON.parse(localStorage.getItem('path'));
-    }
-    if(localStorage.getItem('log')){
-        gtf.log = JSON.parse(localStorage.getItem('log'));
-    }
+
+export function setCurrentNode(value){
+    currentNode = value;
+}
+
+export function setPath(value){
+    path = value;
 }
 
 export function move(country){
