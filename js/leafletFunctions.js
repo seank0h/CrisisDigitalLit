@@ -16,7 +16,7 @@ export function drawNodeWithCountryCode(_countryCode,_color){
                 circle = L.circle([data.geonames[0].north - ((data.geonames[0].north - data.geonames[0].south)/2), data.geonames[0].east - ((data.geonames[0].east - data.geonames[0].west)/2)] , {
                     color: _color,
                     fillColor: _color,
-                    fillOpacity: 0.5,
+                    fillOpacity: 1,
                     radius: 50000
                 }).addTo(mymap);
              }
