@@ -8,7 +8,7 @@ export function getTextFile(fileName){
     return text;
 }
 
-export var log = [];
+export var log;
 export function setLog(value){
     log = value;
 }
