@@ -1,10 +1,11 @@
 import * as g from "./graph.js";
 import * as gtf from "./getTextFile.js";
+import * as main from "./main.js";
 
 export var currentNode = 0;
 export var path = [];
 export var graph = new g.Graph();
-var adjacencies;
+export var adjacencies;
 
 export function setCurrentNode(value){
     currentNode = value;
@@ -30,6 +31,7 @@ export function move(country){
             return true;
         }
     }
+    
     return false;
     
     

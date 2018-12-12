@@ -1,3 +1,5 @@
+import * as main from './main.js';
+
 export function getTextFile(fileName){
     var request = new XMLHttpRequest();
     request.open('GET', fileName, false);
