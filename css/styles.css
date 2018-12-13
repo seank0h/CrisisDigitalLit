@@ -66,3 +66,40 @@
         overflow-x:hidden;
     }
 }
+/*
+Styles for Homepage and Notes page
+*/
+body
+{
+    background-image:url("../images/homebg.jpg");
+    text-align: center;
+    font-family: Wizzta, Arial, sans-serif;
+
+}
+h1{
+    font-size:88px;
+}
+a{
+    color: black;
+}
+#start{
+    font-size: 68px;
+}
+#notes{
+    font-size:48px;
+}
+#about{
+margin: auto;
+width:50%;
+font-size:36px;
+background:rgba(255, 195, 83, 0.582);
+padding:10px;
+}
+#credits
+{margin: auto;
+    width:50%;
+    font-size:36px;
+    background:rgba(255, 195, 83, 0.582);
+    padding:10px;
+}
+
