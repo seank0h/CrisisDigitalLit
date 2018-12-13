@@ -20,8 +20,33 @@
     <body>
         <div class="grid-container">
             <div id='mapid' class="grid-item"></div>
-            <div id="log" class="grid-item"></div>
+            <div id="key" class="grid-item">
+                    <div class='my-legend'>
+                            <div class='legend-title'>The Key for the Nodes</div>
+                            <div class='legend-scale'>
+                              <ul class='legend-labels'>
+                                <li><span style='background:rgb(4, 0, 255);'></span>Current Country</li>
+                                <li><span style='background:rgb(255, 0, 0);'></span>Countries Visited</li>
+                                <li><span style='background:rgb(8, 209, 58);'></span>Adjacent Countries</li>
+                                <li><span style='background:rgb(0, 0, 0);'></span>Possible Route</li>
+                              </ul>
+                            </div>          
+                    </div>
+                    <h1>Guide</h1>
+                    <span id="explain">You are following a Syrian Refugee family and you must choose the route they must take to escape. 
+                            Each country is represented by the circle drawn on the center. After clicking on a circle you will see 
+                            new lexia, generated beneath the map, that describes the events that transpired enroute to the country or on arrival. Each new lexia for the country is generated ontop of the existing lexia.
+                            <br>
+                            <br>
+                            You cannot go back any of the countries you visited and we have functions that prevent easy undoing of actions.
+                            <br>
+                            <br>
+                            <br> 
+                            After reaching the end of a route, click on the most recent lexia to reset.
+                            </span>
+            </div>
         </div>  
+        <div id="log" ></div>
         <script type="module" src="js/leafletFunctions.js"></script>  
     </body>
 </html>

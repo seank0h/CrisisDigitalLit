@@ -1,0 +1,68 @@
+/*
+Styles for Homepage and Notes page
+*/
+@font-face
+{
+    font-family:Wizzta;
+    src: url(../Fonts/wizzta.ttf);
+}
+body
+{
+    background-image:url("../images/homebg.jpg");
+    text-align: center;
+    font-family: Wizzta, Arial, sans-serif;
+     /* Background image is centered vertically and horizontally at all times */
+  background-position: center center;
+  
+  /* Background image doesn't tile */
+  background-repeat: no-repeat;
+  
+  /* Background image is fixed in the viewport so that it doesn't move when 
+     the content's height is greater than the image's height */
+  background-attachment: fixed;
+  
+  /* This is what makes the background image rescale based
+     on the container's size */
+  background-size: cover;
+  
+  /* Set a background color that will be displayed
+     while the background image is loading */
+  background-color: #464646;
+}
+
+h1{
+    font-size:88px;
+    color: white;
+    background: rgba(3, 146, 34, 0.5);
+
+}
+#stars{
+    color: red;
+}
+a:visited
+{
+    color:white;
+}
+#start{
+    font-size: 68px;
+    background: rgba(255, 255, 255, 0.5);
+}
+#notes{
+    
+    font-size:48px;
+    background:  rgba(0, 0, 0, 0.5);
+}
+#about{
+margin: auto;
+width:50%;
+font-size:36px;
+background:rgba(255, 195, 83, 0.582);
+padding:10px;
+}
+#credits
+{margin: auto;
+    width:50%;
+    font-size:36px;
+    background:rgba(255, 195, 83, 0.582);
+    padding:10px;
+}

@@ -1,12 +1,14 @@
-#map {
-    /* width: 74vw; */
+body {
+    align-content: center;
+    background: beige;
+    
 }
 
 .grid-container {
     display: grid;
     grid-template-columns: 74vw 26vw;
     grid-gap: 0px;
-    background: beige;
+    font-family: Wizzta, Arial, sans-serif;
 
 }
 
@@ -17,13 +19,60 @@
     width: 74vw;
     
 }
-
-.svg-icon {
-    display: inline-block;
-    /* position: absolute; */
-    /* top: 0; */
-    /* left: 0; */
+#key
+{
+    text-align: center;
 }
+#explain
+{
+    font-size: 25px;
+   
+    display: inline-block;
+    padding: 10px;
+}
+.my-legend
+{
+    font-size: 35px;
+
+    display: inline-block;
+}
+.my-legend .legend-title {
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 90%;
+    }
+  .my-legend .legend-scale ul {
+    margin: 0;
+    margin-bottom: 5px;
+    padding: 0;
+    float: left;
+    list-style: none;
+    }
+  .my-legend .legend-scale ul li {
+    font-size: 80%;
+    list-style: none;
+    margin-left: 0;
+    line-height: 18px;
+    margin-bottom: 2px;
+    }
+  .my-legend ul.legend-labels li span {
+    display: block;
+    float: left;
+    height: 16px;
+    width: 30px;
+    margin-right: 5px;
+    margin-left: 0;
+    border: 1px solid #999;
+    }
+  .my-legend .legend-source {
+    font-size: 70%;
+    color: #999;
+    clear: both;
+    }
+  .my-legend a {
+    color: #777;
+    }
 
 #mapid { 
     height: 100vh;
@@ -34,7 +83,7 @@
     font-family:Wizzta;
     src: url(../Fonts/wizzta.ttf);
 }
-@media screen and (min-width:801px)
+@media screen and (min-width:800px)
 {
     #log
     {
@@ -42,16 +91,15 @@
         display: flex;
         font-family: Wizzta, Arial, sans-serif;
         font-size: 25px;
-        padding-left: 15px;
-        padding-right: 15px;
+        padding: 15px;
         background-image: url("../images/logbackground2.jpg");
         background-repeat: repeat;
         height:100%;
         text-align: center;
-        max-width: 100%;
+        align-items: center;
     }
 }
-@media screen and (max-width:800px)
+@media only screen and (max-width: 767px)
 {
     #log
     {
@@ -66,40 +114,5 @@
         overflow-x:hidden;
     }
 }
-/*
-Styles for Homepage and Notes page
-*/
-body
-{
-    background-image:url("../images/homebg.jpg");
-    text-align: center;
-    font-family: Wizzta, Arial, sans-serif;
 
-}
-h1{
-    font-size:88px;
-}
-a{
-    color: black;
-}
-#start{
-    font-size: 68px;
-}
-#notes{
-    font-size:48px;
-}
-#about{
-margin: auto;
-width:50%;
-font-size:36px;
-background:rgba(255, 195, 83, 0.582);
-padding:10px;
-}
-#credits
-{margin: auto;
-    width:50%;
-    font-size:36px;
-    background:rgba(255, 195, 83, 0.582);
-    padding:10px;
-}
 
