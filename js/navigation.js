@@ -9,6 +9,7 @@ export var adjacencies;
 
 export function setCurrentNode(value){
     currentNode = value;
+    adjacencies = graph.getAdjacenciesByID(value);
 }
 
 export function setPath(value){
@@ -16,7 +17,6 @@ export function setPath(value){
 }
 
 export function move(country){
-    adjacencies = graph.getAdjacenciesByID(currentNode);
     for(var i = 0; i < adjacencies.length; i++){
         var id = graph.getCountryID(country);
         if(id == -1){
@@ -28,6 +28,9 @@ export function move(country){
             gtf.addTextToLog(country);
             localStorage.setItem('currentNode', currentNode);
             localStorage.setItem('path', JSON.stringify(path));
+
+            adjacencies = graph.getAdjacenciesByID(currentNode);
+            
             return true;
         }
     }
