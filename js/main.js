@@ -60,9 +60,9 @@ export function addResetButton(){
     var buttonText = document.createTextNode("Reset");
     resetButton.appendChild(buttonText);
     resetButton.setAttribute("id","resetButton");
-    document.getElementById("log").append(resetButton);
-    document.getElementById('log').addEventListener("click",localStore.reset);
-    document.getElementById('log').setAttribute("onclick","location.reload();");
+    document.getElementById('key').append(resetButton);
+    document.getElementById('key').addEventListener("click",localStore.reset);
+    document.getElementById('key').setAttribute("onclick","location.reload();");
 }
 
 // Draw all paths and display log on refresh
