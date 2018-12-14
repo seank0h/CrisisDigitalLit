@@ -68,3 +68,7 @@ export function addResetButton(){
 // Draw all paths and display log on refresh
 drawAllPaths();
 gtf.displayLog();
+if(document.getElementById("log").innerText == ""){
+    gtf.addTextToLog("syria");
+    gtf.displayLog();
+}
